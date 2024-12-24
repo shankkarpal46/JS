@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height:300px;
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="details">
+
+        <input type="text" name="username">
+        <input type="number" name="age">
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <div class="box">
+
+    </div>
+
+    <form action="" id="product">
+        <label for="">Product Name</label>
+        <input type="text" name="product_name" >
+
+        <label for="">Product Price</label>
+        <input type="text" name="product_price">
+
+        <input type="submit">
+    </form>
+
+    <script>
+        document.querySelector(".box").addEventListener("click",(event,)=>{
+            console.log(event.target);
+            (event.target).style.backgroundColor="red"
+        })
+
+        document.getElementById("details").addEventListener("submit",(event)=>{
+            event.preventDefault();
+            console.log(event.target.username.value)
+            console.log(event.target.age.value)
+        })
+
+        document.getElementById("product").addEventListener("submit",(event)=>{
+            event.preventDefault();
+            console.log(event.target.product_name.value)
+            console.log(event.target.product_price.value)
+        })
+    </script>
+</body>
+</html>
