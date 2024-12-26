@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="subjectForm">
+        <input type="text" name="subjects">
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="container">
+
+    </div>
+    <ol id="subjectList">
+    </ol>
+    <script>
+        document.getElementById("subjectForm").addEventListener("submit",(event)=>{
+            event.preventDefault();
+            const text = document.createTextNode(event.target.subjects.value)
+            const li = document.createElement("li")
+            li.style.backgroundColor=event.target.subjects.value;
+            li.appendChild(text)
+            const ol = document.getElementById("subjectList").appendChild(li)
+        
+        })
+    </script>
+    
+</body>
+</html>

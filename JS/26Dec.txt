@@ -1,0 +1,5 @@
+event propogation
+
+event bubling.(small to big)
+
+event capturing.(big to small)
