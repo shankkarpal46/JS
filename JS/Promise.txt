@@ -1,0 +1,13 @@
+new Promise(function(resolve,reject){
+	let status = true;
+	if (status)
+		resolve(12)
+	else
+		reject("Error")
+})
+
+resolve	reject	resolve/reject
+
+then() 	catch() 	finally()
+
+12 will stored in then()

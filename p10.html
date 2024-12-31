@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        const promise = new Promise(function(resolve,reject){
+            let status = false;
+            if (status)
+                resolve({id:101,name:"Shankar"})
+            else
+                reject("Error")
+        })
+
+        promise.then((data)=>{
+            alert(data.id+" "+data.name)
+    
+        })
+        .catch((data)=>{
+            alert(data)
+        })
+        .finally(()=>{
+            alert("Finally block.")
+        })
+    </script>
+</body>
+</html>

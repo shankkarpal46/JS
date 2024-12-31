@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <!-- <form action="" id="name_form">
+        <label for="name">Enter your name:</label>
+        <input type="text"  name="name" id ="name">
+        <input type="submit" value="Submit">
+    </form> -->
+    
+    <form action="" id="id_form">
+        <label for="name">Enter the product id:</label>
+        <input type="number"  name="id">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // const promise = fetch("https://catfact.ninja/fact")
+
+        // promise.then(data=>{
+        //     //console.log(data.text())
+        //     return data.json().then(data=>{
+        //         //console.log(data.fact)
+        //         document.write(data.fact)
+        //     })
+        // })
+        // .catch(error=>{
+        //     document.write(error)
+        // })
+
+        // document.getElementById("name_form").addEventListener("submit",(event)=>{
+        //     event.preventDefault()
+        //     console.log(event.target.name.value)
+        //     const promise2 = fetch("https://api.agify.io?name="+event.target.name.value)
+
+        //     promise2.then(data=>{
+        //         return data.json().then(data=>{
+        //             document.write(data)
+        //         })
+        //     })
+        //     .catch(error=>{
+        //         document.write("Error")
+        //     })
+        // })
+
+        document.getElementById("id_form").addEventListener("submit",(event)=>{
+            event.preventDefault()
+            console.log(event.target.id.value)
+            const promise3 = fetch("https://fakestoreapi.com/products/"+event.target.id.value)
+
+            promise3.then(data=>{
+                return data.json().then(data=>{
+                    document.write(data["id"]+"<br>"+data["title"]+"<br>"+data["description"])
+                })  
+            })
+            .catch(error=>{
+                document.write("Error")
+            })
+        })
+
+        
+
+      
+    </script>
+</body>
+</html>
