@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyn and Await</title>
+</head>
+<body>
+    <script>
+        async function processdata(){
+            const api = "https://api.nationalize.io?name=nathaniel"
+
+            const data = await fetch(api);
+            const jsonData = await data.json();
+            console.log(jsonData["country"][0]) 
+        }
+
+        processdata()
+    </script>
+</body>
+</html>
